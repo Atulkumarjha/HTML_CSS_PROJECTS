@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="SURVEY_PAGE.CSS" />
+    <title>freeCodeCamp Survey Form</title>
+  </header>
+  <body>
+    <h1 id="title">ATUL KUMAR JHA SURVEY PAGE</h1>
+    <p id="description" class="established">THANKYOU FOR GIVING YOUR VALUABLE TIME</p>
+    <form id="survey-form" >
+      <fieldset>
+        <label id="name-label">Name<input id="name" type="text" placeholder="Enter your name" required /></label>
+        <label id="email-label">Email<input id="email" type="email" placeholder="Enter your Email" required /></label>
+        <label id="number-label">Number <input id="number" type="number" min="10" max="100" placeholder="MOBILE NUMBER"/></label>
+        <label> Which option best describes your current role
+          <select id="dropdown">
+            <option value="">Select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Full Time Job</option>
+            <option value="3">Full Time Learner</option>
+            <option value="4">Prefer not to say</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>DO YOU LIKE THE PROJECT??</label>
+          <label><input type="radio" class="inline" name="attribute" value="1" checked /> Definitely</label>
+          <label><input type="radio" class="inline" name="attribute" value="2" /> Maybe</label>
+          <label><input type="radio" class="inline" name="attribute" value="3" /> Not sure</label>
+      </fieldset>
+      <fieldset>
+        <label>LANGUAGES KNOWN AS A PROGRAMMER
+          <select id="dropdown2">
+            <option value="">SELECT A OPTION</option>
+            <option value="1">C++</option>
+            <option value="2">PYTHON</option>
+            <option value="3">JAVA</option>
+            <option value="4">JAVA SCRIPT</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>What would you like to become</label>
+        <label><input type="checkbox" class="inline" value="FRONT-END DEVELOPER" /> Front-end Projects</label>
+        <label><input type="checkbox" class="inline" value="BACK-END DEVELOPER" /> Back-end Projects</label>
+        <label><input type="checkbox" class="inline" value="DATA-ANALYST" /> Data Analytics</label>
+        <label><input type="checkbox" class="inline" value="DSA MASTER" /> Competitor programmer</label>
+      </fieldset>
+      <fieldset>
+        <label> Any comments or suggestions about the project...
+          <textarea rows="5" cols="50" placeholder="Enter your suggestions here..."></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <input type="submit" value="Submit" id="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
