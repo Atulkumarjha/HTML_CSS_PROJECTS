@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scoreboard</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <header class="secondary">
+            <button type="button" class="save" onclick="save()">SAVE</button>
+            <button type="button" class="clear" onclick="clearr()">CLEAR</button>
+            <div class = "one">
+                <h3>Home : 
+                <label id="entry1">0</label>
+            </h3>
+            </div>
+            <div class = "two">
+                <h3>Guest : 
+                    <label id="entry2">0</label>
+                </h3>
+            </div>
+        </header>
+        <div class="primary">
+            <div class="first">
+                <h1 class=" team1">HOME</h1>
+                <div class="score1" id="score1">0</div>
+                <div class="pts1">
+                    <button type="button" onclick="increment1()">+1</button>
+                    <button type="button" onclick="increment2()">+2</button>
+                    <button type="button" onclick="increment3()">+3</button>
+
+                </div>
+            </div>
+            <div class="second">
+                <h1 class=" team2">GUEST</h1>
+                <div class="score2" id="score2">0</div>
+                <div class="pts2">
+                    <button type="button" onclick="increment01()">+1</button>
+                    <button type="button" onclick="increment02()">+2</button>
+                    <button type="button" onclick="increment03()">+3</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
