@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+    /* COLORS */
+    --HEADER-RED: rgb(241, 92, 92);
+    --FONT-COLOR: whitesmoke;
+    --BODY-GRAY: rgb(70, 70, 71);
+    --HEADER-HOVER-BLUE: rgb(98, 98, 236);
+    --PROJECT-PBGCOLOR: rgb(52, 53, 58);
+    --POPPING-RED: brown;
+
+}
+/* UTILITY CLASSES */
+.wrap{
+    white-space:wrap;
+}
+
+.inline{
+    display: inline;
+}
+
+/* || NAVIGATION BAR */
+.nav__bar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: var(--HEADER-RED);
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid black;
+}
+
+.nav__bar ul{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav__bar li{
+    display: inline;
+    padding: 1em 1em;
+    height: 80px;
+}
+
+.nav__links{
+    text-decoration: none;
+    color: var(--FONT-COLOR);
+}
+
+.nav__bar li:hover, .nav__bar li:focus{
+    background-color: var(--HEADER-HOVER-BLUE);
+}
+
+/* WELCOME SECTION */
+
+.section__first{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BODY-GRAY);
+}
+
+.section__h1{
+    font-size: 3em;
+    color: var(--FONT-COLOR);
+}
+
+.section__p{
+    font-style: italic;
+    font-size: 1.7em;
+    color: var(--HEADER-RED);
+}
+
+/* || PROJECTS SECTION */
+
+.section__projects{
+    height: 130vh;
+    background-color: var(--HEADER-HOVER-BLUE);
+}
+
+.section__projects h2{
+    color: var(--FONT-COLOR);
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
+    padding-top: 3rem;
+}
+
+.projects__div{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-tile{
+    width: 30%;
+    min-width: 300px;
+    text-decoration: none;
+}
+
+.projects__images{
+    width: 100%;
+    height: 400px;
+    display: block;
+
+}
+
+.projects__p{
+    background-color: var(--PROJECT-PBGCOLOR);
+    color: var(--FONT-COLOR);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.projects__p:hover::after{
+    content: '/>';
+    color: orange;
+    position: absolute;
+    right: 20px;
+}
+
+.projects__p:hover::before{
+    content: '<';
+    color: orange;
+    position: absolute;
+    left: 20px;
+
+}
+
+
+.div__button{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.projects__button{
+    padding: 1rem 1.5rem;
+    background-color: var(--PROJECT-PBGCOLOR);
+    color: var(--FONT-COLOR);
+    font: inherit;
+    cursor: pointer;
+}
+
+.projects__button:hover{
+    background: var(--POPPING-RED);
+    transition: background 0.5s ease;
+}
+
+/* CONTACT SECTION */
+
+.section__contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PROJECT-PBGCOLOR);
+    gap: 2rem;
+}
+.contact__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--FONT-COLOR);
+}
+.contact__h2{
+    font-size: 3.5rem;
+}
+.contact__p{
+    font-style: italic;
+    font-weight: 100;
+}
+.contact__links a{
+    color: var(--FONT-COLOR);
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.contact__links a:hover{
+    transform: translateY(-2rem);
+    transition: all 0.5s ease;
+}
+
+/* || FOOTER */
+.footer{
+    height: 120px;
+    background-color: rgb(52, 53, 58);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 4px solid var(--POPPING-RED);
+}
+
+.footer p{
+    color: var(--FONT-COLOR);
+    padding: 1rem;
+}
+
+.footer__link{
+    color: var(--FONT-COLOR);
+    text-decoration: none;
+}
+
+/* DARK MODE */
+@media(prefers-color-scheme: dark){
+    :root{
+        --HEADER-RED: rgb(233, 116, 116);
+        --FONT-COLOR: whitesmoke;
+        --BODY-GRAY: rgb(70, 70, 71);
+        --HEADER-HOVER-BLUE: rgb(30, 30, 44);
+        --PROJECT-PBGCOLOR: rgb(52, 53, 58);
+        --POPPING-RED: rgb(216, 224, 96);
+    }
+}
