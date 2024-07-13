@@ -1,0 +1,21 @@
+*{
+    background-color:grey
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the navbar (less padding and a smaller font size) */
+   @media screen and (max-height: 450px) {
+     #navbar  {padding-top: 15px;}
+     #navbar  a {font-size: 18px;}
+   }
+  header{
+    position:fixed;
+  }
+   #contact-block{
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+  h1{
+    font-size: 75%
+  }
